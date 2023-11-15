@@ -1,0 +1,23 @@
+{% load crispy_forms_tags %}
+<div class='form'>
+    <form action="" method='POST' enctype='multipart/form-data'>
+        {% csrf_token %}
+                <div class='row'>
+               
+                    {{ curious.pub_number|as_crispy_field }}
+                </div>
+                <div class='row'>
+                
+                    {{ curious.conf_number|as_crispy_field }}
+                </div>
+                <div class='row'>
+                
+                    {{ curious.book_number|as_crispy_field }}
+                </div>
+                
+
+        <button class="btn btn-outline-success btn-lg btn-block" type="submit">Discover</button>
+
+    </form>
+
+</div>

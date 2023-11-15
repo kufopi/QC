@@ -1,0 +1,46 @@
+{% load crispy_forms_tags %}
+<div class='form'>
+    <form action="" method='POST' enctype='multipart/form-data'>
+        {% csrf_token %}
+            <div class='row'>
+                <div class="col-3">
+                    <strong>{{ request.user.staff|title }}</strong>
+                </div>
+                <div class="col-3">
+                    {{ form.article_title|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.journal_name|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.publication_date|as_crispy_field }}
+                   
+                </div>
+                
+
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    {{ form.abstract|as_crispy_field }}
+                </div>
+
+                <div class="col-4">
+                    {{ form.co_authors|as_crispy_field }}
+                </div>
+
+                <div class="col-4">
+                    {{ form.published|as_crispy_field }}
+                </div>
+                
+                
+            </div>
+
+            
+        
+
+        <button class="btn btn-outline-success btn-lg btn-block" type="submit">Save</button>
+
+    </form>
+
+</div>

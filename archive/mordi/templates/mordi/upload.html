@@ -1,0 +1,57 @@
+{% extends 'ground.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+    CONAS Biometrics
+{% endblock title %}
+
+{% block body %}
+
+<div class=" row">
+    <div class="column left">
+        <p>Hi Everyone</p>
+        <p>Total Registered Staff Strength: <strong>{{ number }}</strong></p>
+        <ol>
+            {% for person in everyone %}
+                <li>{{ person|title }}</li>
+            {% endfor %}
+    </ol>
+            
+    </div>
+    <div class="column middle" >
+        {% if messages %}
+              {% for message in messages %}
+                          <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                          <span class="sr-only">Close</span>
+                      </button>
+                      <strong> {{ message }}.</strong>
+                  </div>
+          
+                 
+              {% endfor %}
+          {% endif %}
+            
+            
+           
+           {% if check %}
+            {% include 'mordi/form_upload.html' %}
+           {% else %}
+           <div class='center'>
+                {% include 'mordi/discover.html' %}
+            </div>
+           {% endif %}
+            
+    </div>
+    <div class="column right" >
+        <h4><em>Hi Everyone</em></h4>
+        {% if curious %}
+            {% include "mordi/search.html" %}
+        {% endif %} 
+    </div>
+</div>  
+
+{% endblock body %}
+

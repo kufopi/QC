@@ -1,0 +1,43 @@
+
+{% extends 'ground.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+    End
+{% endblock title %}
+
+{% block body %}
+
+<div class=" row">
+    <div class="column left">
+        <p>Hi {{ request.user }}</p>
+    </div>
+    <div class="column middle" >
+        <div class="muma">
+	
+
+            <div class="card text-center" >
+                  <div class="card-header">
+                    That will be all for now
+                  </div>
+              <div class="card-body">
+                <h5 class="card-title"><strong>You Sucessfully filled all the forms</strong></h5>
+                <p class="card-text">In case you add additional data , click the appropriate link above</p>
+            <a  class="btn btn-danger" href="{% url 'logout' %}" role = 'button'>Logout</a>
+              </div>
+                  <div class="card-footer text-muted">
+                 CoNAS ({{ date }})
+                  </div>
+            </div>
+    
+            
+        
+    </div>
+    </div>
+    <div class="column right" >
+        <h4><em>Hi {{ request.user }}</em></h4>
+    </div>
+</div>  
+
+{% endblock body %}

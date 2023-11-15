@@ -1,0 +1,35 @@
+{% load crispy_forms_tags %}
+<div class='form'>
+    <form action="" method='POST' enctype='multipart/form-data'>
+        {% csrf_token %}
+            <div class='row'>
+                <div class="col-2">
+                    <strong>{{ request.user.staff|title }}</strong>
+                </div>
+                <div class="col-2">
+                    {{ form.book_title|as_crispy_field }}
+                </div>
+                <div class="col-2">
+                    {{ form.co_authors|as_crispy_field }}
+                </div>
+                <div class="col-2">
+                    {{ form.publisher|as_crispy_field }}
+                   
+                </div>
+                <div class="col-2">
+                    {{ form.chapter_title|as_crispy_field }}
+                </div>
+                
+
+            </div>
+
+            
+
+            
+        
+
+        <button class="btn btn-outline-success btn-lg btn-block" type="submit">Save</button>
+
+    </form>
+
+</div>

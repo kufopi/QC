@@ -1,0 +1,29 @@
+{% load crispy_forms_tags %}
+<div class='form'>
+    <form action="" method='POST' enctype='multipart/form-data'>
+        {% csrf_token %}
+            <div class='row'>
+                <div class="col-4">
+                    <strong>{{ request.user.staff|title }}</strong>
+                </div>
+                <div class="col-4">
+                    {{ form.designation|as_crispy_field }}
+                </div>
+                <div class="col-4">
+                    {{ form.promotion_date|as_crispy_field }}
+                </div>
+                
+                
+
+            </div>
+
+            
+
+            
+        
+
+        <button class="btn btn-outline-success btn-lg btn-block" type="submit">Save</button>
+
+    </form>
+
+</div>

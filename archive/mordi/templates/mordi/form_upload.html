@@ -1,0 +1,43 @@
+{% load crispy_forms_tags %}
+<div class='form'>
+    <form action="" method='POST' enctype='multipart/form-data'>
+        {% csrf_token %}
+            <div class='row'>
+                <div class="col-3">
+                    {{ form.staff_id|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.surname|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.middle_name|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.first_name|as_crispy_field }}
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    {{ form.gender|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.dob|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.doe|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.cv_pdf|as_crispy_field }}
+                </div>
+            </div>
+
+            
+        
+
+        <button class="btn btn-outline-success btn-lg btn-block" type="submit">Save</button>
+
+    </form>
+
+</div>

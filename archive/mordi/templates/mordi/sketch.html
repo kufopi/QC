@@ -1,0 +1,164 @@
+<div class="row">
+    
+        <div class="col-2">
+            ID:<br><strong>{{ person.staff_id }}</strong>
+        </div>
+
+        <div class="col-2">
+            Gender:<br> <strong>{{ person.gender }}</strong>
+        </div>
+
+        <div class="col-2">
+            Born:<br> <strong>{{ person.dob }}</strong>
+        </div>
+
+        <div class="col-2">
+            Employed:<br> <strong>{{ person.doe }}</strong>
+        </div>
+
+        <div class="col-2">
+            Department: <br><strong>{{ person.department }}</strong>
+        </div>
+
+        <div class="col-2">
+            Telephone:<br> <strong>{{ person.phone }}</strong>
+        </div>
+
+</div>
+
+{% if pubs %}
+
+<div class="row james">
+    <strong>Publications</strong>
+    <table class="table table-striped table-inverse table-responsive">
+        <thead class="thead-inverse">
+            
+            <tr>
+                <th>S/N</th>
+                <th>Article</th>
+                <th>Journal_name</th>
+                <th>Co_authors</th>
+                <th>Publication_date</th>
+            </tr>
+            </thead>
+            <tbody>
+                <ol>
+                    {% for j in pubs %}
+                <tr>
+                    <td scope="row"><li>{{ forloop.counter }}</li></td>
+                    <td>{{ j.article_title }}</td>
+                    <td>{{ j.journal_name }}</td>
+                    <td>{{ j.co_authors }}</td>
+                    <td>{{ j.publication_date }}</td>
+                </tr>
+                    {% endfor %}
+                </ol>
+                
+            </tbody>
+    </table>
+</div>
+
+{% endif %}
+
+
+
+{% if cons %}
+
+<div class="row james">
+    <strong>Conferences Attended</strong>
+    <table class="table table-striped table-inverse table-responsive">
+        <thead class="thead-inverse">
+            
+            <tr>
+                <th>S/N</th>
+                <th>Conference_Theme</th>
+                <th>Organising_Body</th>
+                <th>Abstract</th>
+                <th>Conference_Date</th>
+            </tr>
+            </thead>
+            <tbody>
+                <ol>
+                    {% for j in cons %}
+                <tr>
+                    <td scope="row"><li>{{ forloop.counter }}</li></td>
+                    <td>{{ j.conference_theme }}</td>
+                    <td>{{ j.organising_body }}</td>
+                    <td>{{ j.abstract }}</td>
+                    <td>{{ j.conference_date }}</td>
+                </tr>
+                    {% endfor %}
+                </ol>
+                
+            </tbody>
+    </table>
+</div>
+
+{% endif %}
+
+
+{% if books %}
+
+<div class="row james">
+    <strong>Books/Chapters Written</strong>
+    <table class="table table-striped table-inverse table-responsive">
+        <thead class="thead-inverse">
+            
+            <tr>
+                <th>S/N</th>
+                <th>book_title</th>
+                <th>co_authors</th>
+                <th>publisher</th>
+                <th>chapter_title</th>
+            </tr>
+            </thead>
+            <tbody>
+                <ol>
+                    {% for j in books %}
+                <tr>
+                    <td scope="row"><li>{{ forloop.counter }}</li></td>
+                    <td>{{ j.book_title }}</td>
+                    <td>{{ j.co_authors }}</td>
+                    <td>{{ j.publisher }}</td>
+                    <td>{{ j.chapter_title }}</td>
+                </tr>
+                    {% endfor %}
+                </ol>
+                
+            </tbody>
+    </table>
+</div>
+
+{% endif %}
+
+{% if promos %}
+
+<div class="row james">
+    <strong>Promotions</strong>
+    <table class="table table-striped table-inverse table-responsive">
+        <thead class="thead-inverse">
+            
+            <tr>
+                <th>S/N</th>
+                <th>designation</th>
+                <th>promotion_date</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+                <ol>
+                    {% for j in promos %}
+                <tr>
+                    <td scope="row"><li>{{ forloop.counter }}</li></td>
+                    <td>{{ j.designation }}</td>
+                    <td>{{ j.promotion_date }}</td>
+                    
+                </tr>
+                    {% endfor %}
+                </ol>
+                
+            </tbody>
+    </table>
+</div>
+
+{% endif %}

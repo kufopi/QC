@@ -1,0 +1,73 @@
+.column {
+    float: left;
+    padding: 10px;
+    /* height: 300px; Should be removed. Only for demonstration */
+  }
+  
+  .left, .right {
+    width: 15%;
+    background-color: #EBF4FA;
+  }
+  
+  .middle {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .row {
+    padding: 2em 4em;
+  
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cat {
+    margin-top: 2em ;
+  
+  }
+  .parent {
+    align-items: center;
+    width: 60%;
+  }
+  
+  .pikin{
+    align-items: center;
+    width: 60%;
+  }
+
+  .james{
+    margin: 0 auto;
+    width: 70%;
+  }
+  .card {
+
+    margin: 0 auto; /* Added */
+  float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+  }
+  .muma{
+margin: 0 auto;
+  }
+
+  .cames{
+    margin: 0 auto;
+    width: 20%;
+  }
+
+  .gee{
+    text-align: center;
+  }
+
+  .ga{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: block;
+  }

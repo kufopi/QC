@@ -1,0 +1,62 @@
+{% load crispy_forms_tags %}
+<div class='form'>
+    <form action="" method='POST' enctype='multipart/form-data'>
+        {% csrf_token %}
+            <div class='row'>
+                <div class="col-3">
+                    {{ form.matric|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.surname|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.firstname|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.middlename|as_crispy_field }}
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    {{ form.gender|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.DoB|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.department|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.graduating_year|as_crispy_field }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    {{ form.gce|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.waec|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.jamb|as_crispy_field }}
+                </div>
+                <div class="col-3">
+                    {{ form.birth_cert|as_crispy_field }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    {{ form.passport|as_crispy_field }}
+                </div>
+            </div>
+        
+
+        <button class="btn btn-outline-success btn-lg btn-block" type="submit">Save</button>
+
+    </form>
+
+</div>
